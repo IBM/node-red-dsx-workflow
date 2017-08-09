@@ -1,17 +1,16 @@
 # Orchestration of the analytics workflow in IBM Data Science Experience(DSX) using a custom web user-interface built with Node-RED (Work in Progress)
 
-In this developer journey we will use Jupyter notebooks in IBM Data Science experience(DSX) to augment
-IBM Watson Natural Language Understanding API output through configurable mechanism for text classification.
+In this developer journey we will use Node-RED to render the web user-interface and invoke the analytics workflows in Jupyter notebooks on IBM Data Science experience(DSX).
 
 When the reader has completed this journey, they will understand how to:
 
 * Create and run a Jupyter notebook in DSX.
 * Use DSX Object Storage to access a data and configuration files.
-* Use IBM Watson Natural Language Understanding API to extract metadata from document in Jupyter notebooks.
-* Extract and format unstructured data using simplified Python functions.
-* Use a configuration file to build configurable and layered classification grammar.
-* Use the combination of grammatical classification and regex patterns from configuration file to classify word token classes.
-* Store the processed output JSON in DSX Object Storage.
+* Development on Data Science Experience using Python Pandas to derive insights on the data.
+*	Development of a web user interface using Node-RED. 
+*	Integration with Jupyter notebooks in Data Science Experience using Node-RED.
+*	Triggering an analytics workflow from the UI and orchestration of the flow using websockets on Node-RED.
+
 
 The intended audience for this journey is developers who want to learn method for augumenting classification metadata obtained from Watson Natural Language Understanding API, in situations when there is scarcity of historical data. The traditional approach of training a Text Analytics model yields less than expected results. The distinguishing factor of this journey is, it allows a configurable mechanism of text classification. It helps developer with a head start in case of text from specialized domain with no generally available english parser.
 
