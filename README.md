@@ -57,11 +57,22 @@ Create the following Bluemix service by following the link to use the Bluemix UI
   * [**Node-RED Starter**](https://console.bluemix.net/catalog/starters/node-red-starter)
   
   ![](doc/source/images/bluemix_service_nlu.png)
+  * Click on `Visit App URL` to launch the Node-RED editor
+  * Click on Next
+  * Enter a username and password to secure the Node-RED editor. Click on Next
+  * Click on Next
+  * Click on Finish
+  * Click on Go to your Node-RED flow editor  
   
-## 4. Import the Node-RED flow
+## 3. Import the Node-RED flow
+The flow json for Node-RED can be found under `node-red-flow` directory. 
+* Download the `orchestrate_dsx_workflow.json`
+* Open the file with a text editor and copy the contents to Clipboard
+* On the Node-RED flow editor, click the Menu and select Import -> Clipboard and paste the contents
 
+## 4. Configure the Node-RED flow
 
-## 3. Create the notebook
+## 5. Create the notebook
 
 Use the menu on the left to select `My Projects` and then `Default Project`.
 Click on `Add notebooks` (upper right) to create a notebook.
@@ -74,7 +85,7 @@ Click on `Add notebooks` (upper right) to create a notebook.
 
 ![](doc/source/images/create_notebook_from_url.png)
 
-## 4. Add the data 
+## 6. Add the data 
 
 #### Add the data to the notebook
 Use `Find and Add Data` (look for the `10/01` icon)
@@ -98,24 +109,6 @@ Replace the `sampleTextFileName` with the name of the data file and `sampleConfi
 
 ## 5. Update the notebook with service credentials
 
-#### Add the Watson Natural Language Understanding credentials to the notebook
-Select the cell below `2.1 Add your service credentials from Bluemix for the Watson services` section in the notebook to update the credentials for Watson Natural Langauage Understanding. 
-
-Open the Watson Natural Language Understanding service in your `Bluemix Dashboard`. You can follow the link below to use the Bluemix UI to open the service.
-* [**Watson Natural Language Understanding**](https://console.bluemix.net/dashboard/services)
-
-Once the service is open click the `Service Credentials` menu on the left.
-
-![](doc/source/images/service_credentials.png)
-
-In the `Service Credentials` that opens up in the UI, select `Credentials` you would like to use in the notebook from the `KEY NAME` column. Click `View credentials` and copy `username` and `password` key values that appear on the UI in JSON format.
-
-![](doc/source/images/copy_credentials.png)
-
-Update the `username` and `password` key values in the cell below `2.1 Add your service credentials from Bluemix for the Watson services` section.
-
-![](doc/source/images/watson_nlu_credentials.png)
-
 #### Add the Object Storage credentials to the notebook
 Select the cell below `2.2 Add your service credentials for Object Storage` section in the notebook to update
 the credentials for Object Store. 
@@ -123,6 +116,9 @@ the credentials for Object Store.
 Use `Find and Add Data` (look for the `10/01` icon) and its `Files` tab. You should see the file names uploaded earlier. Make sure your active cell is the empty one created earlier. Select `Insert to code` (below your file name). Click `Insert Crendentials` from drop down menu.
 
 ![](doc/source/images/objectstorage_credentials.png)
+
+#### Update the websocket URL
+
 
 ## 6. Run the notebook
 
@@ -150,29 +146,12 @@ There are several ways to execute the code cells in your notebook:
     panel. Here you can schedule your notebook to be executed once at some future
     time, or repeatedly at your specified interval.
 
-## 7. Download the results
+## 7. Open the UI web page
 
-The notebook stores the result in ``DSX-ObjectStore`` once it has completed the text classification. The results are stored in  `sample_text_classification.txt` file. Follow the link below to find the ``DSX-ObjectStore`` service listed. Click the ``DSX-ObjectStore`` in the list, click the listed containers to find `sample_text_classification.txt` in their file listing. Select `sample_text_classification.txt` file using select box on the left in the file listing. Click the `SelectAction` button on the top file of the file listing and use the `Download File` drop down menu to download `sample_text_classification.txt` file.
-
-Follow the link to open your Object Store Service in Bluemix.
-* [**DSX-ObjectStore**](https://console.bluemix.net/dashboard/storage)
-
-![](doc/source/images/objectstore_download_file.png)
 
 
 ## 8. Analyze the results
 
-After running each cell of the notebook under Classify text, the results will display. 
-
-The configuration json controls the way the text is classfied. The classification process is divided into stages - Base Tagging and Domain Tagging. The Base Tagging stage can be used to specify keywords based classification, regular expression based classification and tagging based on chunking expressions. The Domain Tagging stage can be used to specify classification that are specific to the domain to augment the results from Watson Natural Language Understanding.
-
-![](doc/source/images/text_classify_config.png)
-
-We can modify the configuration json to add more keywords, regular expressions to augment the text classification without any changes to the code.
-We can add more stages to the configuration json if required and enhance the text classification results with code modifications.
-
-It can be seen from the classification results that the keywords and regular expressions specified in the configuration have been correctly classified
-in the analyzed text that is displayed.
 
 # Troubleshooting
 
