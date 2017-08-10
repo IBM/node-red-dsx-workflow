@@ -40,12 +40,12 @@ described in detail below.
 1. [Sign up for the Data Science Experience](#1-sign-up-for-the-data-science-experience)
 1. [Create Bluemix services](#2-create-bluemix-services)
 1. [Import the Node-RED flow](#3-import-the-node-red-flow)
-
-1. [Create the notebook](#3-create-the-notebook)
-1. [Add the data and configuraton file](#4-add-the-data-and-configuration-file)
-1. [Update the notebook with service credentials](#5-update-the-notebook-with-service-credentials)
-1. [Run the notebook](#6-run-the-notebook)
-1. [Download the results](#7-download-the-results)
+1. [Configure the Node-RED flow](#4-configure-the-node-red-flow)
+1. [Create the notebook](#5-create-the-notebook)
+1. [Add the data](#6-add-the-data)
+1. [Update the notebook with service credentials](#7-update-the-notebook-with-service-credentials)
+1. [Run the notebook](#8-run-the-notebook)
+1. [Open the UI web page](#9-open-the-ui-web-page)
 1. [Analyze the results](#8-analyze-the-results)
 
 ## 1. Sign up for the Data Science Experience
