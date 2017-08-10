@@ -5,24 +5,23 @@ In this developer journey we will use Node-RED to render the web user-interface 
 When the reader has completed this journey, they will understand how to:
 
 * Create and run a Jupyter notebook in DSX.
-* Use DSX Object Storage to access a data and configuration files.
-* Development on Data Science Experience using Python Pandas to derive insights on the data.
-*	Development of a web user interface using Node-RED. 
-*	Integration with Jupyter notebooks in Data Science Experience using Node-RED.
+* Use DSX Object Storage to access data and configuration files.
+* Use Python Pandas to derive insights on the data.
+*	Develop a web user interface using Node-RED. 
 *	Triggering an analytics workflow from the UI and orchestration of the flow using websockets on Node-RED.
 
 
-The intended audience for this journey is developers who want to learn method for augumenting classification metadata obtained from Watson Natural Language Understanding API, in situations when there is scarcity of historical data. The traditional approach of training a Text Analytics model yields less than expected results. The distinguishing factor of this journey is, it allows a configurable mechanism of text classification. It helps developer with a head start in case of text from specialized domain with no generally available english parser.
+The intended audience for this journey are developers who want to develop an end to end analytics solution quickly with a web user interface. The Data Science Experience(DSX) is primarily used by Data Scientists for developing the analytics code. By using Node-RED, we can quickly develop a user-interface and trigger the DSX analytics code from the uer-interface. 
 
 ![](doc/source/images/architecture.png)
 
 ## Included components
 
+* [Node-RED](https://console.bluemix.net/catalog/starters/node-red-starter): Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.
+
 * [IBM Data Science Experience](https://www.ibm.com/bs-en/marketplace/data-science-experience): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
 
 * [Bluemix Object Storage](https://console.ng.bluemix.net/catalog/services/object-storage/?cm_sp=dw-bluemix-_-code-_-devcenter): A Bluemix service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
-
-* [Watson Natural Language Understanding](https://console.bluemix.net/catalog/services/natural-language-understanding/?cm_sp=dw-bluemix-_-code-_-devcenter): A Bluemix service that can analyze text to extract meta-data from content such as concepts, entities, keywords, categories, sentiment, emotion, relations, semantic roles, using natural language understanding.
 
 ## Featured technologies
 
@@ -55,7 +54,7 @@ Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By sig
 
 Create the following Bluemix service by following the link to use the Bluemix UI and create it.
 
-  * [**Watson Natural Language Understanding**](https://console.bluemix.net/catalog/services/natural-language-understanding)
+  * [**Node-RED Starter**](https://console.bluemix.net/catalog/starters/node-red-starter)
   
   ![](doc/source/images/bluemix_service_nlu.png)
 
@@ -72,16 +71,16 @@ Click on `Add notebooks` (upper right) to create a notebook.
 
 ![](doc/source/images/create_notebook_from_url.png)
 
-## 4. Add the data and configuration file
+## 4. Add the data 
 
-#### Add the data and configuration to the notebook
+#### Add the data to the notebook
 Use `Find and Add Data` (look for the `10/01` icon)
 and its `Files` tab. From there you can click
-`browse` and add data and configuration files from your computer.
+`browse` and add data files from your computer.
 
-> Note:  If you don't have your own data and configuration files, you can get our example by cloning
-this git repo. Look in the `data/sample_text.txt` directory for data file and in the `configuration/sample_config.txt`.
-If you use configuration file from your computer, make sure to conform to the JSON structure given in `configuration/sample_config.txt`.
+> Note: The data files in the `data directory` - `olympics.csv` and `dictionary.csv` have been downloaded from https://www.kaggle.com/the-guardian/olympic-games. Please visit the site for the terms and conditions of usage.
+
+
 
 ![](doc/source/images/add_file.png)
 
