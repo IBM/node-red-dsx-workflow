@@ -57,6 +57,9 @@ Create the following Bluemix service by following the link to use the Bluemix UI
   * [**Node-RED Starter**](https://console.bluemix.net/catalog/starters/node-red-starter)
   
   ![](doc/source/images/bluemix_service_nlu.png)
+  
+## 4. Import the Node-RED flow
+
 
 ## 3. Create the notebook
 
@@ -78,7 +81,7 @@ Use `Find and Add Data` (look for the `10/01` icon)
 and its `Files` tab. From there you can click
 `browse` and add data files from your computer.
 
-> Note: The data files in the `data directory` - `olympics.csv` and `dictionary.csv` have been downloaded from https://www.kaggle.com/the-guardian/olympic-games. Please visit the site for the terms and conditions of usage.
+> Note: The data files in the `data` directory - `olympics.csv` and `dictionary.csv` have been downloaded from https://www.kaggle.com/the-guardian/olympic-games. Please visit the site for the terms and conditions for usage of the data.
 
 
 
