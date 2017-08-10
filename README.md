@@ -39,6 +39,8 @@ described in detail below.
 
 1. [Sign up for the Data Science Experience](#1-sign-up-for-the-data-science-experience)
 1. [Create Bluemix services](#2-create-bluemix-services)
+1. [Import the Node-RED flow](#3-import-the-node-red-flow)
+
 1. [Create the notebook](#3-create-the-notebook)
 1. [Add the data and configuraton file](#4-add-the-data-and-configuration-file)
 1. [Update the notebook with service credentials](#5-update-the-notebook-with-service-credentials)
@@ -107,7 +109,7 @@ Replace the `sampleTextFileName` with the name of the data file and `sampleConfi
 
 ![](doc/source/images/update_variables.png)
 
-## 5. Update the notebook with service credentials
+## 7. Update the notebook with service credentials
 
 #### Add the Object Storage credentials to the notebook
 Select the cell below `2.2 Add your service credentials for Object Storage` section in the notebook to update
@@ -120,7 +122,7 @@ Use `Find and Add Data` (look for the `10/01` icon) and its `Files` tab. You sho
 #### Update the websocket URL
 
 
-## 6. Run the notebook
+## 8. Run the notebook
 
 When a notebook is executed, what is actually happening is that each code cell in
 the notebook is executed, in order, from top to bottom.
@@ -146,11 +148,11 @@ There are several ways to execute the code cells in your notebook:
     panel. Here you can schedule your notebook to be executed once at some future
     time, or repeatedly at your specified interval.
 
-## 7. Open the UI web page
+## 9. Open the UI web page
 
 
 
-## 8. Analyze the results
+## 10. Analyze the results
 
 
 # Troubleshooting
