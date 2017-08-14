@@ -40,7 +40,7 @@ described in detail below.
 1. [Sign up for the Data Science Experience](#1-sign-up-for-the-data-science-experience)
 1. [Create Bluemix services](#2-create-bluemix-services)
 1. [Import the Node-RED flow](#3-import-the-node-red-flow)
-1. [Configure the Node-RED flow](#4-configure-the-node-red-flow)
+1. [Note the websocket URL](#4-note-the-websocket-url)
 1. [Create the notebook](#5-create-the-notebook)
 1. [Add the data](#6-add-the-data)
 1. [Update the notebook with service credentials](#7-update-the-notebook-with-service-credentials)
@@ -54,17 +54,18 @@ Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By sig
 
 ## 2. Create Bluemix services
 
-Create the following Bluemix service by following the link to use the Bluemix UI and create it.
+Create the following Bluemix service by following the link to use the Bluemix UI and create it. Choose an appropriate `App name:`.
 
   * [**Node-RED Starter**](https://console.bluemix.net/catalog/starters/node-red-starter)
   
-  ![](doc/source/images/bluemix_service_nlu.png)
+  ![](doc/source/images/bluemix_service_nodered.png)
+  
   * Click on `Visit App URL` to launch the Node-RED editor
-  * Click on Next
-  * Enter a username and password to secure the Node-RED editor. Click on Next
-  * Click on Next
-  * Click on Finish
-  * Click on Go to your Node-RED flow editor  
+  * On the `Welcome to your new Node-RED instance on IBM Bluemix` screen, Click on `Next`
+  * On the `Secure your Node-RED editor` screen, enter a username and password to secure the Node-RED editor and click on `Next`
+  * On the `Browse available IBM Bluemix nodes` screen, click on `Next`
+  * On the `Finish the install` screen, click on Finish
+  * Click on `Go to your Node-RED flow editor`  
   
 ## 3. Import the Node-RED flow
 The flow json for Node-RED can be found under `node-red-flow` directory. 
@@ -72,7 +73,17 @@ The flow json for Node-RED can be found under `node-red-flow` directory.
 * Open the file with a text editor and copy the contents to Clipboard
 * On the Node-RED flow editor, click the Menu and select Import -> Clipboard and paste the contents
 
-## 4. Configure the Node-RED flow
+ ![](doc/source/images/import_nodered_flow.png)
+ 
+* Deploy the Node-RED flow by clicking on the `Deploy` button
+
+![](doc/source/images/deploy_nodered_flow.png)
+
+## 4. Note the websocket URL
+
+![](doc/source/images/note_websocket_url.png)
+
+The websocket URL is ws://`<Node-RED url`/ws/orchestrate. The `Node-RED url` is the marked portion of the URL in the above image.
 
 ## 5. Create the notebook
 
@@ -82,7 +93,7 @@ Click on `Add notebooks` (upper right) to create a notebook.
 * Select the `From URL` tab.
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
-* Enter this Notebook URL: https://github.com/IBM/watson-document-classifier/blob/master/notebooks/watson_document_classifier.ipynb
+* Enter this Notebook URL: https://github.com/IBM/node-red-dsx-workflow/blob/master/notebooks/node_red_dsx_workflow.ipynb
 * Click the `Create Notebook` button.
 
 ![](doc/source/images/create_notebook_from_url.png)
