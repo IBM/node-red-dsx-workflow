@@ -45,8 +45,7 @@ described in detail below.
 1. [Add the data](#6-add-the-data)
 1. [Update the notebook with service credentials](#7-update-the-notebook-with-service-credentials)
 1. [Run the notebook](#8-run-the-notebook)
-1. [Open the UI web page](#9-open-the-ui-web-page)
-1. [Analyze the results](#8-analyze-the-results)
+1. [Analyze the results](#9-analyze-the-results)
 
 ## 1. Sign up for the Data Science Experience
 
@@ -111,19 +110,10 @@ and its `Files` tab. From there you can click
 
 ![](doc/source/images/add_file.png)
 
-#### Fix-up variable names
-Once the files have been uploaded into ``DSX-ObjectStore`` you need to update the variables that refer to the data and configuration files in the Jupyter Notebook.
-
-In the notebook, update the global variables the in cell following `2.3 Global Variables` section.
-
-Replace the `sampleTextFileName` with the name of the data file and `sampleConfigFileName` with the configuration file name.
-
-![](doc/source/images/update_variables.png)
-
 ## 7. Update the notebook with service credentials
 
 #### Add the Object Storage credentials to the notebook
-Select the cell below `2.2 Add your service credentials for Object Storage` section in the notebook to update
+Select the cell below `2.1 Add your service credentials for Object Storage` section in the notebook to update
 the credentials for Object Store. 
 
 Use `Find and Add Data` (look for the `10/01` icon) and its `Files` tab. You should see the file names uploaded earlier. Make sure your active cell is the empty one created earlier. Select `Insert to code` (below your file name). Click `Insert Crendentials` from drop down menu.
@@ -131,7 +121,9 @@ Use `Find and Add Data` (look for the `10/01` icon) and its `Files` tab. You sho
 ![](doc/source/images/objectstorage_credentials.png)
 
 #### Update the websocket URL
+In the `6. Expose integration point with a websocket client` cell, update the websocket url noted earlier in the `start_websocket_listener` function.
 
+![](doc/source/images/update_websocket_url.png)
 
 ## 8. Run the notebook
 
@@ -159,12 +151,11 @@ There are several ways to execute the code cells in your notebook:
     panel. Here you can schedule your notebook to be executed once at some future
     time, or repeatedly at your specified interval.
 
-## 9. Open the UI web page
+## 9. Analyze the results
 
+Access the UI at the URL:
 
-
-## 10. Analyze the results
-
+![](doc/source/images/analyze_results.png)
 
 # Troubleshooting
 
