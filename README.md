@@ -86,7 +86,7 @@ The websocket URL is ws://`<Node-RED url`/ws/orchestrate. The `Node-RED url` is 
 
 ## 5. Create the notebook
 
-Use the menu on the left to select `My Projects` and then `Default Project`.
+Use the menu on the top to select `Projects` and then `Default Project`.
 Click on `Add notebooks` (upper right) to create a notebook.
 
 * Select the `From URL` tab.
