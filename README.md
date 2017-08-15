@@ -53,13 +53,13 @@ Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By sig
 
 ## 2. Create Bluemix services
 
-Create the following Bluemix service by following the link to use the Bluemix UI and create it. Choose an appropriate `App name:`.
+Create the following Bluemix service by following the link to use the Bluemix UI. Choose an appropriate `App name:`. Click on `Create`.
 
   * [**Node-RED Starter**](https://console.bluemix.net/catalog/starters/node-red-starter)
   
   ![](doc/source/images/bluemix_service_nodered.png)
   
-  * Click on `Visit App URL` to launch the Node-RED editor
+  * On the newly created Node-RED application page, Click on `Visit App URL` to launch the Node-RED editor once the application is in `Running` state.
   * On the `Welcome to your new Node-RED instance on IBM Bluemix` screen, Click on `Next`
   * On the `Secure your Node-RED editor` screen, enter a username and password to secure the Node-RED editor and click on `Next`
   * On the `Browse available IBM Bluemix nodes` screen, click on `Next`
