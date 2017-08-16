@@ -11,7 +11,7 @@ When the reader has completed this journey, they will understand how to:
 *	Triggering an analytics workflow from the UI and orchestration of the flow using websockets on Node-RED.
 
 
-The intended audience for this journey are developers who want to develop an end to end analytics solution quickly with a web user interface. The Data Science Experience(DSX) is primarily used by Data Scientists for developing the analytics code. By using Node-RED, we can quickly develop a user-interface and trigger the DSX analytics code from the uer-interface. 
+The intended audience for this journey are developers who want to develop an end to end analytics solution quickly with a web user interface. The Data Science Experience(DSX) is primarily used by Data Scientists for developing the analytics code. By using Node-RED, we can quickly develop a user-interface and trigger the DSX analytics code from the user-interface. 
 
 ![](doc/source/images/architecture.png)
 
