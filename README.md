@@ -53,7 +53,7 @@ Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By sig
 
 ## 2. Create Bluemix services
 
-Create the following Bluemix service by following the link to use the Bluemix UI. Choose an appropriate `App name:`. Click on `Create`.
+Create the following Bluemix service by following the link to use the Bluemix UI. Choose an appropriate name for the Node-RED application - `App name:`. Click on `Create`.
 
   * [**Node-RED Starter**](https://console.bluemix.net/catalog/starters/node-red-starter)
   
@@ -82,7 +82,7 @@ The flow json for Node-RED can be found under `node-red-flow` directory.
 
 ![](doc/source/images/note_websocket_url.png)
 
-The websocket URL is ws://`<Node-RED url`/ws/orchestrate. The `Node-RED url` is the marked portion of the URL in the above image.
+The websocket URL is ws://`<Node-RED base url>`/ws/orchestrate. The `Node-RED base url` is the marked portion of the URL in the above image.
 
 ## 5. Create the notebook
 
