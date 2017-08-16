@@ -153,7 +153,8 @@ There are several ways to execute the code cells in your notebook:
 
 ## 9. Analyze the results
 
-Access the UI at the URL:
+Access the UI at the URL: http://`<Node-RED base url>`/dsxinsights
+The `<Node-RED base url>` is the URL noted in section [Note the websocket URL](#4-note-the-websocket-url).
 
 ![](doc/source/images/analyze_results.png)
 
