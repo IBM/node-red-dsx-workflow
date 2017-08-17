@@ -167,10 +167,13 @@ There are several ways to execute the code cells in your notebook:
     panel. Here you can schedule your notebook to be executed once at some future
     time, or repeatedly at your specified interval.
 
+### Start the websocket client
+For the communication between the UI and Notebook to be established, start the web socket client by executing the cell under `7. Start websocket client`.    
+
 ## 10. Analyze the results
 
-Access the UI at the URL: http://`<Node-RED base url>`/dsxinsights. 
-The `<Node-RED base url>` is the URL noted in section [Note the websocket URL](#4-note-the-websocket-url).
+The UI can be accessed at the URL: http://`<NODERED_BASE_URL>`/dsxinsights. 
+The `<NODERED_BASE_URL>` is the URL noted in section [Note the websocket URL](#4-note-the-websocket-url).
 
 ![](doc/source/images/analyze_results.png)
 
