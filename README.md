@@ -41,11 +41,12 @@ described in detail below.
 1. [Create Bluemix services](#2-create-bluemix-services)
 1. [Import the Node-RED flow](#3-import-the-node-red-flow)
 1. [Note the websocket URL](#4-note-the-websocket-url)
-1. [Create the notebook](#5-create-the-notebook)
-1. [Add the data](#6-add-the-data)
-1. [Update the notebook with service credentials](#7-update-the-notebook-with-service-credentials)
-1. [Run the notebook](#8-run-the-notebook)
-1. [Analyze the results](#9-analyze-the-results)
+1. [Update the websocket URL](#5-update-the-websocket-url)
+1. [Create the notebook](#6-create-the-notebook)
+1. [Add the data](#7-add-the-data)
+1. [Update the notebook with service credentials](#8-update-the-notebook-with-service-credentials)
+1. [Run the notebook](#9-run-the-notebook)
+1. [Analyze the results](#10-analyze-the-results)
 
 ## 1. Sign up for the Data Science Experience
 
@@ -84,7 +85,16 @@ The flow json for Node-RED can be found under `node-red-flow` directory.
 
 The websocket URL is ws://`<Node-RED base url>`/ws/orchestrate. The `Node-RED base url` is the marked portion of the URL in the above image.
 
-## 5. Create the notebook
+## 5. Update the websocket URL
+Click on the node named `HTML`.
+![](doc/source/images/html_node.png)
+
+Click on the HTML area and search `ws:`. 
+Enter the websocket URL that was noted in the [section](#4-note-the-websocket-url): 	
+var socket = new  WebSocket("ws://<websocket URL>");
+![](doc/source/images/update_html_websocket_url.png)
+
+## 6. Create the notebook
 
 Use the menu on the top to select `Projects` and then `Default Project`.
 Click on `Add notebooks` (upper right) to create a notebook.
@@ -97,7 +107,7 @@ Click on `Add notebooks` (upper right) to create a notebook.
 
 ![](doc/source/images/create_notebook_from_url.png)
 
-## 6. Add the data 
+## 7. Add the data 
 
 #### Add the data to the notebook
 Use `Find and Add Data` (look for the `10/01` icon)
@@ -110,7 +120,7 @@ and its `Files` tab. From there you can click
 
 ![](doc/source/images/add_file.png)
 
-## 7. Update the notebook with service credentials
+## 8. Update the notebook with service credentials
 
 #### Add the Object Storage credentials to the notebook
 Select the cell below `2.1 Add your service credentials for Object Storage` section in the notebook to update
@@ -120,12 +130,12 @@ Use `Find and Add Data` (look for the `10/01` icon) and its `Files` tab. You sho
 
 ![](doc/source/images/objectstorage_credentials.png)
 
-#### Update the websocket URL
-In the `6. Expose integration point with a websocket client` cell, update the websocket url noted earlier in the `start_websocket_listener` function.
+#### Update the websocket URL in the notebook
+In the `6. Expose integration point with a websocket client` cell, update the websocket url [noted earlier](#4-note-the-websocket-url) in the `start_websocket_listener` function.
 
 ![](doc/source/images/update_websocket_url.png)
 
-## 8. Run the notebook
+## 9. Run the notebook
 
 When a notebook is executed, what is actually happening is that each code cell in
 the notebook is executed, in order, from top to bottom.
@@ -151,7 +161,7 @@ There are several ways to execute the code cells in your notebook:
     panel. Here you can schedule your notebook to be executed once at some future
     time, or repeatedly at your specified interval.
 
-## 9. Analyze the results
+## 10. Analyze the results
 
 Access the UI at the URL: http://`<Node-RED base url>`/dsxinsights. 
 The `<Node-RED base url>` is the URL noted in section [Note the websocket URL](#4-note-the-websocket-url).
