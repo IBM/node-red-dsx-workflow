@@ -84,7 +84,9 @@ The flow json for Node-RED can be found under `node-red-flow` directory.
 
 ![](doc/source/images/note_websocket_url.png)
 
-The websocket URL is ws://`<Node-RED base url>`/ws/orchestrate. The `Node-RED base url` is the marked portion of the URL in the above image.
+The websocket URL is ws://`<NODERED_BASE_URL>`/ws/orchestrate  where the `NODERED_BASE_URL` is the marked portion of the URL in the above image.
+#### Note
+An example websocket URL - ws://myApp.mybluemix.net/ws/orchestrate  where `myApp.mybluemix.net` is the NODERED_BASE_URL. The NODERED_BASE_URL can have an additional region information say `eu-gb` for UK region. 
 
 ## 5. Update the websocket URL in HTML code
 Click on the node named `HTML`.
@@ -92,7 +94,7 @@ Click on the node named `HTML`.
 
 Click on the HTML area and search for `ws:` to locate the line where the websocket URL is specified. 
 Enter the websocket URL that was noted in the [section 4](#4-note-the-websocket-url): 	
-var socket = new  WebSocket("ws://<websocket URL>");
+	var websocketURL = "ws://NODERED_BASE_URL/ws/orchestrate";
 ![](doc/source/images/update_html_websocket_url.png)
 
 ## 6. Create the notebook
