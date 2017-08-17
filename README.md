@@ -106,7 +106,7 @@ Click on `Done` and re-deploy the flow.
 
 ## 6. Create the notebook
 
-Use the menu on the top to select `Projects` and then `Default Project`.
+Open IBM Data Science Experience. Use the menu on the top to select `Projects` and then `Default Project`.
 Click on `Add notebooks` (upper right) to create a notebook.
 
 * Select the `From URL` tab.
