@@ -1,17 +1,18 @@
 # Orchestration of the analytics workflow in IBM Data Science Experience(DSX) using a custom web user-interface built with Node-RED 
 
-In this developer journey we will use Node-RED to render the web user-interface and invoke the analytics workflows in Jupyter notebooks on IBM Data Science experience(DSX).
+In this developer journey we will use Node-RED to render custom web user-interface and invoke the analytics workflows in Jupyter notebooks on IBM Data Science experience(DSX).
+
+Node-RED is a tool for wiring together APIs and online services on Bluemix. The APIs and online services are configured as nodes that can be wired to orchestrate a work flow. It is also a web server where the UI solution can be deployed. It has nodes that support integration with many database services, watson services and analytics services.
 
 When the reader has completed this journey, they will understand how to:
 
 * Create and run a Jupyter notebook in DSX.
-* Use DSX Object Storage to access data and configuration files.
+* Use DSX Object Storage to access data files.
 * Use Python Pandas to derive insights on the data.
-*	Develop a web user interface using Node-RED. 
-*	Triggering an analytics workflow from the UI and orchestration of the flow using websockets on Node-RED.
+*	Develop a custom web user interface using Node-RED. 
+*	Triggering an analytics workflow on DSX from the UI using Node-RED.
 
-
-The intended audience for this journey are developers who want to develop an end to end analytics solution quickly with a web user interface. The Data Science Experience(DSX) is primarily used by Data Scientists for developing the analytics code. By using Node-RED, we can quickly develop a user-interface and trigger the DSX analytics code from the user-interface. 
+The intended audience for this journey are developers who want to develop a complete analytics solution on DSX with a custom web user interface. 
 
 ![](doc/source/images/architecture.png)
 
