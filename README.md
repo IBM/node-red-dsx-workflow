@@ -76,6 +76,9 @@ The flow json for Node-RED can be found under `node-red-flow` directory.
 
  ![](doc/source/images/import_nodered_flow.png)
  
+ 
+ 
+ 
 * Deploy the Node-RED flow by clicking on the `Deploy` button
 
 ![](doc/source/images/deploy_nodered_flow.png)
