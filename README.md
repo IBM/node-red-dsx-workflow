@@ -141,7 +141,7 @@ Use `Find and Add Data` (look for the `10/01` icon) and its `Files` tab. You sho
 ![](doc/source/images/objectstorage_credentials.png)
 
 #### Update the websocket URL in the notebook
-In the `6. Expose integration point with a websocket client` cell, update the websocket url noted in [section 4](#4-note-the-websocket-url) in the `start_websocket_listener` function.
+In the cell below `6. Expose integration point with a websocket client` , update the websocket url noted in [section 4](#4-note-the-websocket-url) in the `start_websocket_listener` function.
 
 ![](doc/source/images/update_websocket_url.png)
 
