@@ -22,4 +22,4 @@ Jupyter Notebooks
 Node-RED
 --------
 
-* Make sure that the websocket URL has been updated with the NODERED_BASE_URL in the HTML code. Refer to section `5. Update the websocket URL in HTML code` for details.
+* Make sure that the websocket URL has been updated with the NODERED_BASE_URL in the HTML code. Refer to section `5. Update the websocket URL in HTML code` in the documentation for details.
