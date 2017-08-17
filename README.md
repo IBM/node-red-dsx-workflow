@@ -94,8 +94,10 @@ Click on the node named `HTML`.
 ![](doc/source/images/html_node.png)
 
 Click on the HTML area and search for `ws:` to locate the line where the websocket URL is specified. 
-Enter the websocket URL that was noted in the [section 4](#4-note-the-websocket-url): 	
+Enter the websocket URL that was noted in the [Section 4](#4-note-the-websocket-url): 	
+
 	var websocketURL = "ws://NODERED_BASE_URL/ws/orchestrate";
+	
 ![](doc/source/images/update_html_websocket_url.png)
 
 ## 6. Create the notebook
