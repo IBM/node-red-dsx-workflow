@@ -85,12 +85,12 @@ The flow json for Node-RED can be found under `node-red-flow` directory.
 
 The websocket URL is ws://`<Node-RED base url>`/ws/orchestrate. The `Node-RED base url` is the marked portion of the URL in the above image.
 
-## 5. Update the websocket URL
+## 5. Update the websocket URL in HTML code
 Click on the node named `HTML`.
 ![](doc/source/images/html_node.png)
 
-Click on the HTML area and search `ws:`. 
-Enter the websocket URL that was noted in the [section](#4-note-the-websocket-url): 	
+Click on the HTML area and search for `ws:` to locate the line where the websocket URL is specified. 
+Enter the websocket URL that was noted in the [section 4](#4-note-the-websocket-url): 	
 var socket = new  WebSocket("ws://<websocket URL>");
 ![](doc/source/images/update_html_websocket_url.png)
 
@@ -131,7 +131,7 @@ Use `Find and Add Data` (look for the `10/01` icon) and its `Files` tab. You sho
 ![](doc/source/images/objectstorage_credentials.png)
 
 #### Update the websocket URL in the notebook
-In the `6. Expose integration point with a websocket client` cell, update the websocket url [noted earlier](#4-note-the-websocket-url) in the `start_websocket_listener` function.
+In the `6. Expose integration point with a websocket client` cell, update the websocket url noted in [section 4](#4-note-the-websocket-url) in the `start_websocket_listener` function.
 
 ![](doc/source/images/update_websocket_url.png)
 
