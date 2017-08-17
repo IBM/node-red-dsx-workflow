@@ -102,6 +102,8 @@ Update the websocket URL with the base URL that was noted in the [Section 4](#4-
 	
 ![](doc/source/images/update_html_websocket_url.png)
 
+Click on `Done` and re-deploy the flow.
+
 ## 6. Create the notebook
 
 Use the menu on the top to select `Projects` and then `Default Project`.
