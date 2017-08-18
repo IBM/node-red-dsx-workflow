@@ -177,7 +177,7 @@ For the communication between the UI and Notebook to be established, start the w
 ## 10. Analyze the results
 
 The UI can be accessed at the URL: http://`<NODERED_BASE_URL>`/dsxinsights. 
-The `<NODERED_BASE_URL>` is the URL noted in section [Note the websocket URL](#4-note-the-websocket-url).
+The `<NODERED_BASE_URL>` is the base URL noted in section [Note the websocket URL](#4-note-the-websocket-url).
 
 ![](doc/source/images/analyze_results.png)
 
