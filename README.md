@@ -16,9 +16,9 @@ The intended audience for this journey are developers who want to develop a comp
 
 ![](doc/source/images/architecture.png)
 
-1. The Object storage stores the data.
-2. The Jupyter notebook processes the data and generates insights. It is powered by Spark.
-3. The Node-RED hosts a websocket server that is a medium of communication between the Jupyter notebook on IBM DSX and Web UI.
+* The Object storage stores the data.
+* The Jupyter notebook processes the data and generates insights. It is powered by Spark.
+* The Node-RED hosts a websocket server that is a medium of communication between the Jupyter notebook on IBM DSX and Web UI.
    The Node-RED also hosts a web server that renders the Web UI.
    
 ## Included components
