@@ -36,7 +36,7 @@ The intended audience for this journey are developers who want to develop a comp
 
 # Watch the Video
 
-[![](http://img.youtube.com/vi/-1LTqwFgEnE/0.jpg)](https://youtu.be/-1LTqwFgEnE)
+[![](http://img.youtube.com/vi/wRnKYhVim20/0.jpg)](https://youtu.be/wRnKYhVim20)
 
 # Steps
 
