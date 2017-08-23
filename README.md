@@ -120,13 +120,13 @@ Click on `Add notebooks` (upper right) to create a notebook.
 ## 7. Add the data 
 
 #### Add the data to the notebook
-Use `Find and Add Data` (look for the `10/01` icon)
+* Please download the files - summer.csv and dictionary.csv from :
+https://www.kaggle.com/the-guardian/olympic-games.
+* Rename the file `summer.csv` to `olympics.csv`
+
+* Use `Find and Add Data` (look for the `10/01` icon)
 and its `Files` tab. From there you can click
-`browse` and add data files from your computer.
-
-> Note: The data files in the `data` directory - `olympics.csv` and `dictionary.csv` have been downloaded from https://www.kaggle.com/the-guardian/olympic-games. Please visit the site for the terms and conditions for usage of the data.
-
-
+`browse` and add data files from your computer to Object storage.
 
 ![](doc/source/images/add_file.png)
 
