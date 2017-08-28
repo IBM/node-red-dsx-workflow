@@ -11,6 +11,24 @@ Jupyter Notebooks
   these are cleared in later cells. Start over at the top when troubleshooting.
 * Many of the cells rely on service credentials from Bluemix that are set in
   earlier cells. Make sure to add your service credentials correctly.  
+* If there is an error in the 4.1 Prepare data section, there could be a change in the column names or format of the data files downloaded from kaggle. Please change the column names and format of the files downloaded from kaggle to match the format below.
+
+olympics.csv
+
+|Year|City|Sport|Discipline|Athlete|Country|Gender|Event|Medal|
+
+|1896|Athens|Aquatics|Swimming|HAJOS, Alfred|HUN|Men|100M Freestyle|Gold|
+
+|1896|Athens|Aquatics|Swimming|HERSCHMANN, Otto|AUT|Men|100M Freestyle|Silver|
+
+dictionary.csv
+
+|Country|Code|Population|GDP per Capita|
+
+|Afghanistan|AFG|32526562|594.3230812|
+
+|Albania|ALB|2889167|3945.217582|
+
 * If the Start Websocket client step throws an error as shown below, please refer to the step `Update the websocket URL in the notebook` in Section 8 of the documentation.
 
           --- response header ---
