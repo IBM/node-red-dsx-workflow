@@ -1,37 +1,41 @@
 # Orchestration of the analytics workflow in IBM Data Science Experience(DSX) using a custom web user-interface built with Node-RED 
 
-In this developer journey we will use Node-RED to render custom web user-interface and invoke the analytics workflows in Jupyter notebooks on IBM Data Science experience(DSX).
+In this developer journey we will use Node-RED to render a custom web user-interface and invoke the analytics workflows in Jupyter notebooks on IBM Data Science experience(DSX).
 
-Node-RED is a tool for wiring together APIs and online services on Bluemix. The APIs and online services are configured as nodes that can be wired to orchestrate a work flow. It is also a web server where the UI solution can be deployed. It has nodes that support integration with many database services, watson services and analytics services.
+Node-RED is a tool for wiring together APIs and online services on Bluemix. The APIs and online services are configured as nodes that can be wired to orchestrate a workflow. It is also a web server where the UI solution can be deployed. It has nodes that support integration with many database services, watson services and analytics services.
 
 When the reader has completed this journey, they will understand how to:
 
 * Create and run a Jupyter notebook in DSX.
 * Use DSX Object Storage to access data files.
 * Use Python Pandas to derive insights on the data.
-*	Develop a custom web user interface using Node-RED. 
-*	Triggering an analytics workflow on DSX from the UI using Node-RED.
+* Develop a custom web user interface using Node-RED. 
+* Triggering an analytics workflow on DSX from the UI using Node-RED.
 
 The intended audience for this journey are developers who want to develop a complete analytics solution on DSX with a custom web user interface. 
 
 ![](doc/source/images/architecture.png)
 
-* The Object storage stores the data.
-* The Jupyter notebook processes the data and generates insights. It is powered by Spark.
-* The Node-RED hosts a websocket server that is a medium of communication between the Jupyter notebook on IBM DSX and Web UI.
-   The Node-RED also hosts a web server that renders the Web UI.
+1. The Object storage stores the data.
+2. Data is utilized as csv files.
+3. The Jupyter notebook processes the data and generates insights.
+4. The Jypyter notebook is powered by Spark.
+5. The Node-RED hosts a websocket server that is a medium of communication between the Jupyter notebook on IBM DSX and Web UI.
+6. The Node-RED hosts a web server that renders the Web UI.
    
 ## Included components
 
 * [Node-RED](https://console.bluemix.net/catalog/starters/node-red-starter): Node-RED is a programming tool for wiring together APIs and online services.
 
-* [IBM Data Science Experience](https://www.ibm.com/bs-en/marketplace/data-science-experience): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
+* [IBM Data Science Experience](https://apsportal.ibm.com/analytics): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
 
 * [Bluemix Object Storage](https://console.ng.bluemix.net/catalog/services/object-storage/?cm_sp=dw-bluemix-_-code-_-devcenter): A Bluemix service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
 
+* [Jupyter Notebooks](http://jupyter.org/): An open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
+
 ## Featured technologies
 
-* [Jupyter Notebooks](http://jupyter.org/): An open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
+* [Data Science](https://medium.com/ibm-data-science-experience/): Systems and scientific methods to analyze structured and unstructured data in order to extract knowledge and insights.
 
 
 # Watch the Video
@@ -60,24 +64,26 @@ Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By sig
 
 ## 2. Create Bluemix services
 
-Create the Node-RED Starter application by following the link. Choose an appropriate name for the Node-RED application - `App name:`. Click on `Create`.
+* Create the [Node-RED Starter application](https://console.bluemix.net/catalog/starters/node-red-starter).
+* Choose an appropriate name for the Node-RED application - `App name:`.
+* Click on `Create`.
 
   * [**Node-RED Starter**](https://console.bluemix.net/catalog/starters/node-red-starter)
   
   ![](doc/source/images/bluemix_service_nodered.png)
   
   * On the newly created Node-RED application page, Click on `Visit App URL` to launch the Node-RED editor once the application is in `Running` state.
-  * On the `Welcome to your new Node-RED instance on IBM Bluemix` screen, Click on `Next`
-  * On the `Secure your Node-RED editor` screen, enter a username and password to secure the Node-RED editor and click on `Next`
-  * On the `Browse available IBM Bluemix nodes` screen, click on `Next`
-  * On the `Finish the install` screen, click on Finish
-  * Click on `Go to your Node-RED flow editor`  
+  * On the `Welcome to your new Node-RED instance on IBM Bluemix` screen, Click on `Next`.
+  * On the `Secure your Node-RED editor` screen, enter a username and password to secure the Node-RED editor and click on `Next`.
+  * On the `Browse available IBM Bluemix nodes` screen, click on `Next`.
+  * On the `Finish the install` screen, click on Finish.
+  * Click on `Go to your Node-RED flow editor`.  
   
 ## 3. Import the Node-RED flow
-The flow json for Node-RED can be found under `node-red-flow` directory. 
-* Download the `orchestrate_dsx_workflow.json`
-* Open the file with a text editor and copy the contents to Clipboard
-* On the Node-RED flow editor, click the Menu and select Import -> Clipboard and paste the contents
+* [Clone this repo](https://github.com/IBM/node-red-dsx-workflow).
+* Navigate to the [orchestrate_dsx_workflow.json](https://github.com/IBM/node-red-dsx-workflow/blob/master/node-red-flow/orchestrate_dsx_workflow.json).
+* Open the file with a text editor and copy the contents to Clipboard.
+* On the Node-RED flow editor, click the Menu and select `Import -> Clipboard` and paste the contents.
 
  ![](doc/source/images/import_nodered_flow.png)
  <br/>
@@ -93,8 +99,9 @@ The flow json for Node-RED can be found under `node-red-flow` directory.
 
 The websocket URL is ws://`<NODERED_BASE_URL>`/ws/orchestrate  where the `NODERED_BASE_URL` is the marked portion of the URL in the above image.
 ### Note:
-An example websocket URL for a Node-RED app with name `myApp` - `ws://myApp.mybluemix.net/ws/orchestrate` where `myApp.mybluemix.net` is the NODERED_BASE_URL. 
-The NODERED_BASE_URL can have an additional region information say `eu-gb` for UK region and NODERED_BASE_URL could be `myApp.eu-gb.mybluemix.net`. 
+An example websocket URL for a Node-RED app with name `myApp` is `ws://myApp.mybluemix.net/ws/orchestrate`, where `myApp.mybluemix.net` is the NODERED_BASE_URL. 
+
+The NODERED_BASE_URL may have additional region information i.e. `eu-gb` for the UK region. In this case NODERED_BASE_URL would be: `myApp.eu-gb.mybluemix.net`. 
 
 ## 5. Update the websocket URL in HTML code
 Click on the node named `HTML`.
@@ -111,9 +118,9 @@ Click on `Done` and re-deploy the flow.
 
 ## 6. Create the notebook
 
-Open IBM Data Science Experience. Use the menu on the top to select `Projects` and then `Default Project`.
-Click on `Add notebooks` (upper right) to create a notebook.
-
+* Open [IBM Data Science Experience](https://apsportal.ibm.com/analytics). 
+* Use the menu on the top to select `Projects` and then `Default Project`.
+* Click on `Add notebooks` (upper right) to create a notebook.
 * Select the `From URL` tab.
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
@@ -128,25 +135,26 @@ Click on `Add notebooks` (upper right) to create a notebook.
 * Please download the files - summer.csv and dictionary.csv from :
 https://www.kaggle.com/the-guardian/olympic-games.
 * Rename the file `summer.csv` to `olympics.csv`
-
-* Use `Find and Add Data` (look for the `10/01` icon)
-and its `Files` tab. From there you can click
-`browse` and add data files from your computer to Object storage.
+* From your project page in DSX, click `Find and Add Data` (look for the `10/01` icon)
+and its `Files` tab. 
+* Click `browse` and navigate to where you downloaded`olympics.csv` and `dictionary.csv` on your computer.
+* Add the files to Object storage.
 
 ![](doc/source/images/add_file.png)
 
-## 8. Update the notebook with service credentials
+## 8. Update the notebook with service credentials and websocket URL
 
 #### Add the Object Storage credentials to the notebook
-Select the cell below `2.1 Add your service credentials for Object Storage` section in the notebook to update
-the credentials for Object Store. 
-
-Use `Find and Add Data` (look for the `10/01` icon) and its `Files` tab. You should see the file names uploaded earlier. Make sure your active cell is the empty one created earlier. Select `Insert to code` (below your file name). Click `Insert Crendentials` from drop down menu.
+* Select the cell below `2.1 Add your service credentials for Object Storage` section in the notebook to update the credentials for Object Store. 
+* Use `Find and Add Data` (look for the `10/01` icon) and its `Files` tab. You should see the file names uploaded earlier. Make sure your active cell is the empty one created earlier. 
+* Select `Insert to code` below olympics.csv.
+* Click `Insert Crendentials` from the drop down menu.
+* If the credentials are written as `credential_2` change them to `credentials_1`.
 
 ![](doc/source/images/objectstorage_credentials.png)
 
 #### Update the websocket URL in the notebook
-In the cell below `6. Expose integration point with a websocket client` , update the websocket url noted in [section 4](#4-note-the-websocket-url) in the `start_websocket_listener` function.
+* In the cell below `6. Expose integration point with a websocket client` , update the websocket url noted in [section 4](#4-note-the-websocket-url) in the `start_websocket_listener` function.
 
 ![](doc/source/images/update_websocket_url.png)
 
@@ -176,8 +184,8 @@ There are several ways to execute the code cells in your notebook:
     panel. Here you can schedule your notebook to be executed once at some future
     time, or repeatedly at your specified interval.
 
-### Start the websocket client
-For the communication between the UI and Notebook to be established, start the web socket client by executing the cell under `7. Start websocket client`.    
+For this Notebook, you can simply `Run All` cells.
+The websocket client will be started when you run the cell under `7. Start websocket client`. This will start the communication between the UI and the Notebook.
 
 ## 10. Analyze the results
 
