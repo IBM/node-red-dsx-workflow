@@ -16,18 +16,17 @@ Jupyter Notebooks
 olympics.csv
 
 |Year|City|Sport|Discipline|Athlete|Country|Gender|Event|Medal|
-
+|----|----|-----|-----------|------|-------|------|-----|-----|
 |1896|Athens|Aquatics|Swimming|HAJOS, Alfred|HUN|Men|100M Freestyle|Gold|
-
 |1896|Athens|Aquatics|Swimming|HERSCHMANN, Otto|AUT|Men|100M Freestyle|Silver|
 
 dictionary.csv
 
 |Country|Code|Population|GDP per Capita|
-
+|-------|----|----------|--------------|
 |Afghanistan|AFG|32526562|594.3230812|
-
 |Albania|ALB|2889167|3945.217582|
+
 
 * If the Start Websocket client step throws an error as shown below, please refer to the step `Update the websocket URL in the notebook` in Section 8 of the documentation.
 
