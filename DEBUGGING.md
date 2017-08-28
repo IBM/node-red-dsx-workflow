@@ -13,16 +13,14 @@ Jupyter Notebooks
   earlier cells. Make sure to add your service credentials correctly.  
 * If there is an error in the `4.1 Prepare data section`, there could be a change in the column names or format of the data files downloaded from [kaggle](https://www.kaggle.com/the-guardian/olympic-games). Please change the column names and format of the files downloaded from [kaggle](https://www.kaggle.com/the-guardian/olympic-games) to match the format below.
 
-    olympics.csv (renamed from summer.csv file downloaded from kaggle) 
-    *****
-        
+    olympics.csv (renamed from summer.csv file downloaded from kaggle)      
+    
     |Year|City|Sport|Discipline|Athlete|Country|Gender|Event|Medal|
     |----|----|-----|-----------|------|-------|------|-----|-----|
     |1896|Athens|Aquatics|Swimming|HAJOS, Alfred|HUN|Men|100M Freestyle|Gold|
     |1896|Athens|Aquatics|Swimming|HERSCHMANN, Otto|AUT|Men|100M Freestyle|Silver|
 
     dictionary.csv
-    *****
     
     |Country|Code|Population|GDP per Capita|
     |-------|----|----------|--------------|
