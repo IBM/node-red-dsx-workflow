@@ -11,6 +11,8 @@ In this developer journey we will demonstrate the use of Node-RED to invoke the 
 #### What is Node-RED?
 Node-RED is a tool for wiring together APIs and online services on Bluemix. The APIs and online services are configured as nodes that can be wired to orchestrate a workflow. It is also a web server where the UI solution can be deployed. It has nodes that support integration with many database services, watson services and analytics services.
 
+Node-RED reduces a lot of development effort. It is easy to improve the solution using other services with Node-RED. It opens a world of possibilities for developers. 
+
 When the reader has completed this journey, they will understand how to:
 
 * Create and run a Jupyter notebook in DSX.
