@@ -8,7 +8,7 @@ repository](https://github.com/IBM/node-red-dsx-workflow).
 
 A good way to familiarize yourself with the codebase and contribution process is
 to look for and tackle low-hanging fruit in the [issue
-tracker](https://github.com/IBM/watson-document-classifier/issues). Before embarking on
+tracker](https://github.com/IBM/node-red-dsx-workflow/issues). Before embarking on
 a more ambitious contribution, please quickly [get in touch](#communication)
 with us.
 
