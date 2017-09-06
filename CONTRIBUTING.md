@@ -41,8 +41,8 @@ For more details, see the [MAINTAINERS](MAINTAINERS.md) page.
 
 ## Communication
 
-Please feel free to connect with us on our [Slack channel]
-(https://dwopen.slack.com).
+Please feel free to connect with us [here]
+(https://github.com/IBM/node-red-dsx-workflow/issues).
 
 ## Setup
 
