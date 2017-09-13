@@ -28,7 +28,7 @@ The intended audience for this journey are developers who want to develop a comp
 1. The Object storage stores the data.
 2. Data is utilized as csv files.
 3. The Jupyter notebook processes the data and generates insights.
-4. The Jypyter notebook is powered by Spark.
+4. The Jupyter notebook is powered by Spark.
 5. The Node-RED hosts a websocket server that is a medium of communication between the Jupyter notebook on IBM DSX and Web UI.
 6. The Node-RED hosts a web server that renders the Web UI.
    
