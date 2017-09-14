@@ -2,11 +2,11 @@
 
 IBM Data Science Experience can be used to analyze data using Jupyter notebooks. There is no mechanism exposed by Data Science Experience to trigger execution of the notebook cells from outside. If this capability is added, we can build a complete end to end analytics solution using IBM Data Science Experience.
 
-This journey addresses two requirements:
+There are two requirements that are addressed by this journey which helps build a complete analytics solution with IBM DSX:
 * Trigger the execution of Python code in a Jupyter Notebook on IBM Data Science Experience from a custom web user interface
 * Visualize the response from the Python code execution in a Jupyter Notebook on IBM Data Science Experience on the custom web user interface
 
-In this developer journey we will demonstrate the use of Node-RED to invoke the analytics workflows in Jupyter notebooks on IBM Data Science experience and also to render a custom web user-interface with minimal programming. 
+We will use [Node-RED](https://nodered.org/) to invoke the analytics workflows in Jupyter notebooks on IBM Data Science experience and also to render a custom web user-interface with minimal programming. 
 
 #### What is Node-RED?
 Node-RED is a tool for wiring together APIs and online services on Bluemix. The APIs and online services are configured as nodes that can be wired to orchestrate a workflow. It is also a web server where the UI solution can be deployed. It has nodes that support integration with many database services, watson services and analytics services.
