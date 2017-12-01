@@ -9,7 +9,7 @@ Jupyter Notebooks
   time.
 * Many of the cells rely on variables that are set in earlier cells. Some of
   these are cleared in later cells. Start over at the top when troubleshooting.
-* Many of the cells rely on service credentials from Bluemix that are set in
+* Many of the cells rely on service credentials from IBM Cloud that are set in
   earlier cells. Make sure to add your service credentials correctly.  
 * If there is an error in the `4.1 Prepare data section`, there could be a change in the column names or format of the data files downloaded from [kaggle](https://www.kaggle.com/the-guardian/olympic-games). Please change the column names and format of the files downloaded from [kaggle](https://www.kaggle.com/the-guardian/olympic-games) to match the format below.
 
