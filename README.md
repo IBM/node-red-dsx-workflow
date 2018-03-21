@@ -6,7 +6,7 @@ The below two requirements are addressed by this journey to help build a complet
 * Trigger the execution of Python code in a Jupyter Notebook on IBM Watson Studio from a custom web user interface
 * Visualize the response from the Python code execution in a Jupyter Notebook on IBM Watson Studio on the custom web user interface
 
-We will use [Node-RED](https://nodered.org/) to invoke the analytics workflows in Jupyter notebooks on IBM Data Science experience and also to render a custom web user-interface with minimal programming.
+We will use [Node-RED](https://nodered.org/) to invoke the analytics workflows in Jupyter notebooks on IBM Watson Studio and also to render a custom web user-interface with minimal programming.
 
 #### What is Node-RED?
 Node-RED is a tool for wiring together APIs and online services on IBM Cloud. The APIs and online services are configured as nodes that can be wired to orchestrate a workflow. It is also a web server where the UI solution can be deployed. It has nodes that support integration with many database services, watson services and analytics services.
