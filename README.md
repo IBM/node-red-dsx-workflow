@@ -1,4 +1,4 @@
-# Orchestration of the analytics workflow in IBM Watson Studio(Watson Studio) using a custom web user-interface built with Node-RED
+# Orchestration of the analytics workflow in IBM Watson Studio using a custom web user-interface built with Node-RED
 
 IBM Watson Studio can be used to analyze data using Jupyter notebooks. There is no mechanism exposed by Watson Studio to trigger execution of the notebook cells from outside. If this capability is added, we can build a complete end to end analytics solution using IBM Watson Studio.
 
