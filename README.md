@@ -1,10 +1,10 @@
-# Orchestration of the analytics workflow in IBM Data Science Experience(DSX) using a custom web user-interface built with Node-RED
+# Orchestration of the analytics workflow in IBM Watson Studio(Watson Studio) using a custom web user-interface built with Node-RED
 
-IBM Data Science Experience can be used to analyze data using Jupyter notebooks. There is no mechanism exposed by Data Science Experience to trigger execution of the notebook cells from outside. If this capability is added, we can build a complete end to end analytics solution using IBM Data Science Experience.
+IBM Watson Studio can be used to analyze data using Jupyter notebooks. There is no mechanism exposed by Watson Studio to trigger execution of the notebook cells from outside. If this capability is added, we can build a complete end to end analytics solution using IBM Watson Studio.
 
-The below two requirements are addressed by this journey to help build a complete analytics solution with IBM DSX.
-* Trigger the execution of Python code in a Jupyter Notebook on IBM Data Science Experience from a custom web user interface
-* Visualize the response from the Python code execution in a Jupyter Notebook on IBM Data Science Experience on the custom web user interface
+The below two requirements are addressed by this journey to help build a complete analytics solution with IBM Watson Studio.
+* Trigger the execution of Python code in a Jupyter Notebook on IBM Watson Studio from a custom web user interface
+* Visualize the response from the Python code execution in a Jupyter Notebook on IBM Watson Studio on the custom web user interface
 
 We will use [Node-RED](https://nodered.org/) to invoke the analytics workflows in Jupyter notebooks on IBM Data Science experience and also to render a custom web user-interface with minimal programming.
 
@@ -15,13 +15,13 @@ Node-RED reduces a lot of development effort. It is easy to improve the solution
 
 When the reader has completed this journey, they will understand how to:
 
-* Create and run a Jupyter notebook in DSX.
-* Use DSX Object Storage to access data files.
+* Create and run a Jupyter notebook in Watson Studio.
+* Use Watson Studio Object Storage to access data files.
 * Use Python Pandas to derive insights on the data.
 * Develop a custom web user interface using Node-RED.
-* Triggering an analytics workflow on DSX from the UI using Node-RED.
+* Triggering an analytics workflow on Watson Studio from the UI using Node-RED.
 
-The intended audience for this journey are developers who want to develop a complete analytics solution on DSX with a custom web user interface.
+The intended audience for this journey are developers who want to develop a complete analytics solution on Watson Studio with a custom web user interface.
 
 ![](doc/source/images/architecture.png)
 
@@ -29,14 +29,14 @@ The intended audience for this journey are developers who want to develop a comp
 2. Data is utilized as csv files.
 3. The Jupyter notebook processes the data and generates insights.
 4. The Jupyter notebook is powered by Spark.
-5. The Node-RED hosts a websocket server that is a medium of communication between the Jupyter notebook on IBM DSX and Web UI.
+5. The Node-RED hosts a websocket server that is a medium of communication between the Jupyter notebook on IBM Watson Studio and Web UI.
 6. The Node-RED hosts a web server that renders the Web UI.
 
 ## Included components
 
 * [Node-RED](https://console.bluemix.net/catalog/starters/node-red-starter): Node-RED is a programming tool for wiring together APIs and online services.
 
-* [IBM Data Science Experience](https://apsportal.ibm.com/analytics): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
+* [IBM Watson Studio](https://apsportal.ibm.com/analytics): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
 
 * [IBM Cloud Object Storage](https://console.bluemix.net/catalog/infrastructure/cloud-object-storage): An IBM Cloud service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
 
@@ -56,7 +56,7 @@ The intended audience for this journey are developers who want to develop a comp
 Follow these steps to setup and run this developer journey. The steps are
 described in detail below.
 
-1. [Sign up for the Data Science Experience](#1-sign-up-for-the-data-science-experience)
+1. [Sign up for the Watson Studio](#1-sign-up-for-the-data-science-experience)
 1. [Create IBM Cloud services](#2-create-ibm-cloud-services)
 1. [Import the Node-RED flow](#3-import-the-node-red-flow)
 1. [Note the websocket URL](#4-note-the-websocket-url)
@@ -67,9 +67,9 @@ described in detail below.
 1. [Run the notebook](#9-run-the-notebook)
 1. [Analyze the results](#10-analyze-the-results)
 
-## 1. Sign up for the Data Science Experience
+## 1. Sign up for the Watson Studio
 
-Sign up for IBM's [Data Science Experience](https://datascience.ibm.com/). By signing up for the Data Science Experience, two services will be created - Spark and ObjectStore in your Bluemix account. 
+Sign up for IBM's [Watson Studio](https://datascience.ibm.com/). By signing up for the Watson Studio, two services will be created - Spark and ObjectStore in your Bluemix account. 
 
 ## 2. Create IBM Cloud services
 
@@ -127,7 +127,7 @@ Click on `Done` and re-deploy the flow.
 
 ## 6. Create the notebook
 
-* Open [IBM Data Science Experience](https://apsportal.ibm.com/analytics).
+* Open [IBM Watson Studio](https://apsportal.ibm.com/analytics).
 * Use the menu on the top to select `Projects` and then `Default Project`.
 * Click on `Add notebooks` (upper right) to create a notebook.
 * Select the `From URL` tab.
@@ -144,7 +144,7 @@ Click on `Done` and re-deploy the flow.
 * Please download the files - `summer.csv` and `dictionary.csv` from:
 https://www.kaggle.com/the-guardian/olympic-games.
 * Rename the file `summer.csv` to `olympics.csv`
-* From your project page in DSX, click `Find and Add Data` (look for the `10/01` icon)
+* From your project page in Watson Studio, click `Find and Add Data` (look for the `10/01` icon)
 and its `Files` tab.
 * Click `browse` and navigate to where you downloaded `olympics.csv` and `dictionary.csv` on your computer.
 * Add the files to Object storage.
