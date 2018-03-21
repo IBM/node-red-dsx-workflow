@@ -16,7 +16,7 @@ Node-RED reduces a lot of development effort. It is easy to improve the solution
 When the reader has completed this journey, they will understand how to:
 
 * Create and run a Jupyter notebook in Watson Studio.
-* Use Watson Studio Object Storage to access data files.
+* Use Object Storage to access data files.
 * Use Python Pandas to derive insights on the data.
 * Develop a custom web user interface using Node-RED.
 * Triggering an analytics workflow on Watson Studio from the UI using Node-RED.
