@@ -1,5 +1,7 @@
 # Orchestration of the analytics workflow in IBM Watson Studio using a custom web user-interface built with Node-RED
 
+> Data Science Experience is now Watson Studio. Although some images in this code pattern may show the service as Data Science Experience, the steps and processes will still work.
+
 IBM Watson Studio can be used to analyze data using Jupyter notebooks. There is no mechanism exposed by Watson Studio to trigger execution of the notebook cells from outside. If this capability is added, we can build a complete end to end analytics solution using IBM Watson Studio.
 
 The below two requirements are addressed by this journey to help build a complete analytics solution with IBM Watson Studio.
@@ -9,6 +11,7 @@ The below two requirements are addressed by this journey to help build a complet
 We will use [Node-RED](https://nodered.org/) to invoke the analytics workflows in Jupyter notebooks on IBM Watson Studio and also to render a custom web user-interface with minimal programming.
 
 #### What is Node-RED?
+
 Node-RED is a tool for wiring together APIs and online services on IBM Cloud. The APIs and online services are configured as nodes that can be wired to orchestrate a workflow. It is also a web server where the UI solution can be deployed. It has nodes that support integration with many database services, watson services and analytics services.
 
 Node-RED reduces a lot of development effort. It is easy to improve the solution using other services with Node-RED. It opens a world of possibilities for developers.
@@ -36,7 +39,7 @@ The intended audience for this journey are developers who want to develop a comp
 
 * [Node-RED](https://console.bluemix.net/catalog/starters/node-red-starter): Node-RED is a programming tool for wiring together APIs and online services.
 
-* [IBM Watson Studio](https://apsportal.ibm.com/analytics): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
+* [IBM Watson Studio](https://www.ibm.com/cloud/watson-studio): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
 
 * [IBM Cloud Object Storage](https://console.bluemix.net/catalog/infrastructure/cloud-object-storage): An IBM Cloud service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
 
@@ -56,7 +59,7 @@ The intended audience for this journey are developers who want to develop a comp
 Follow these steps to setup and run this developer journey. The steps are
 described in detail below.
 
-1. [Sign up for the Watson Studio](#1-sign-up-for-the-data-science-experience)
+1. [Sign up for Watson Studio](#1-sign-up-for-watson-studio)
 1. [Create IBM Cloud services](#2-create-ibm-cloud-services)
 1. [Import the Node-RED flow](#3-import-the-node-red-flow)
 1. [Note the websocket URL](#4-note-the-websocket-url)
@@ -67,9 +70,9 @@ described in detail below.
 1. [Run the notebook](#9-run-the-notebook)
 1. [Analyze the results](#10-analyze-the-results)
 
-## 1. Sign up for the Watson Studio
+## 1. Sign up for Watson Studio
 
-Sign up for IBM's [Watson Studio](https://datascience.ibm.com/). By signing up for the Watson Studio, two services will be created - Spark and ObjectStore in your Bluemix account. 
+Sign up for IBM's [Watson Studio](https://dataplatform.ibm.com/). By signing up for the Watson Studio, two services will be created - Spark and ObjectStore in your Bluemix account. 
 
 ## 2. Create IBM Cloud services
 
@@ -89,6 +92,7 @@ Sign up for IBM's [Watson Studio](https://datascience.ibm.com/). By signing up f
   * Click on `Go to your Node-RED flow editor`.  
   
 ## 3. Import the Node-RED flow
+
 * [Clone this repo](https://github.com/IBM/node-red-dsx-workflow).
 * Navigate to the [orchestrate_dsx_workflow.json](https://github.com/IBM/node-red-dsx-workflow/blob/master/node-red-flow/orchestrate_dsx_workflow.json).
 * Open the file with a text editor and copy the contents to Clipboard.
@@ -113,6 +117,7 @@ An example websocket URL for a Node-RED app with name `myApp` is `ws://myApp.myb
 The `NODERED_BASE_URL` may have additional region information i.e. `eu-gb` for the UK region. In this case `NODERED_BASE_URL` would be: `myApp.eu-gb.mybluemix.net`.
 
 ## 5. Update the websocket URL in HTML code
+
 Click on the node named `HTML`.
 ![](doc/source/images/html_node.png)
 
@@ -127,20 +132,22 @@ Click on `Done` and re-deploy the flow.
 
 ## 6. Create the notebook
 
-* Open [IBM Watson Studio](https://apsportal.ibm.com/analytics).
-* Use the menu on the top to select `Projects` and then `Default Project`.
-* Click on `Add notebooks` (upper right) to create a notebook.
+* In [Watson Studio](https://dataplatform.ibm.com), click on `Create notebook` to create a notebook.
+* Create a project if necessary, provisioning an object storage service if required.
+* In the `Assets` tab, select the `Create notebook` option.
 * Select the `From URL` tab.
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
 * Enter this Notebook URL: https://github.com/IBM/node-red-dsx-workflow/blob/master/notebooks/node_red_dsx_workflow.ipynb
-* Click the `Create Notebook` button.
+* Select the free Anaconda runtime.
+* Click the `Create` button.
 
 ![](doc/source/images/create_notebook_from_url.png)
 
 ## 7. Add the data
 
 #### Add the data to the notebook
+
 * Please download the files - `summer.csv` and `dictionary.csv` from:
 https://www.kaggle.com/the-guardian/olympic-games.
 * Rename the file `summer.csv` to `olympics.csv`
@@ -154,6 +161,7 @@ and its `Files` tab.
 ## 8. Update the notebook with service credentials and websocket URL
 
 #### Add the Object Storage credentials to the notebook
+
 * Select the cell below `2.1 Add your service credentials for Object Storage` section in the notebook to update the credentials for Object Store.
 * Use `Find and Add Data` (look for the `10/01` icon) and its `Files` tab. You should see the file names uploaded earlier. Make sure your active cell is the empty one created earlier.
 * Select `Insert to code` below `olympics.csv`.
@@ -163,6 +171,7 @@ and its `Files` tab.
 ![](doc/source/images/objectstorage_credentials.png)
 
 #### Update the websocket URL in the notebook
+
 * In the cell below `6. Expose integration point with a websocket client`, update the websocket url noted in [section 4](#4-note-the-websocket-url) in the `start_websocket_listener` function.
 
 ![](doc/source/images/update_websocket_url.png)
@@ -210,4 +219,3 @@ The `<NODERED_BASE_URL>` is the base URL noted in section [Note the websocket UR
 # License
 
 [Apache 2.0](LICENSE)
-
