@@ -37,11 +37,11 @@ The intended audience for this journey are developers who want to develop a comp
 
 ## Included components
 
-* [Node-RED](https://console.bluemix.net/catalog/starters/node-red-starter): Node-RED is a programming tool for wiring together APIs and online services.
+* [Node-RED](https://cloud.ibm.com/catalog/starters/node-red-starter): Node-RED is a programming tool for wiring together APIs and online services.
 
 * [IBM Watson Studio](https://www.ibm.com/cloud/watson-studio): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
 
-* [IBM Cloud Object Storage](https://console.bluemix.net/catalog/infrastructure/cloud-object-storage): An IBM Cloud service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
+* [IBM Cloud Object Storage](https://cloud.ibm.com/catalog/infrastructure/cloud-object-storage): An IBM Cloud service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
 
 * [Jupyter Notebooks](http://jupyter.org/): An open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
 
@@ -76,11 +76,11 @@ Sign up for IBM's [Watson Studio](https://dataplatform.ibm.com/). By signing up 
 
 ## 2. Create IBM Cloud services
 
-* Create the [Node-RED Starter application](https://console.bluemix.net/catalog/starters/node-red-starter).
+* Create the [Node-RED Starter application](https://cloud.ibm.com/catalog/starters/node-red-starter).
 * Choose an appropriate name for the Node-RED application - `App name:`.
 * Click on `Create`.
 
-  * [**Node-RED Starter**](https://console.bluemix.net/catalog/starters/node-red-starter)
+  * [**Node-RED Starter**](https://cloud.ibm.com/catalog/starters/node-red-starter)
 
   ![](doc/source/images/bluemix_service_nodered.png)
 
