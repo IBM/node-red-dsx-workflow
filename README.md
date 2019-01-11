@@ -37,13 +37,13 @@ The intended audience for this journey are developers who want to develop a comp
 
 ## Included components
 
-* [Node-RED](https://console.bluemix.net/catalog/starters/node-red-starter): Node-RED is a programming tool for wiring together APIs and online services.
+* [Node-RED](https://cloud.ibm.com/catalog/starters/node-red-starter): Node-RED is a programming tool for wiring together APIs and online services.
 
 * [IBM Watson Studio](https://www.ibm.com/cloud/watson-studio): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
 
-* [IBM Cloud Object Storage](https://console.bluemix.net/catalog/infrastructure/cloud-object-storage): An IBM Cloud service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
+* [IBM Cloud Object Storage](https://cloud.ibm.com/catalog/services/cloud-object-storage): An IBM Cloud service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
 
-* [Jupyter Notebooks](http://jupyter.org/): An open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
+* [Jupyter Notebooks](https://jupyter.org/): An open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
 
 ## Featured technologies
 
@@ -52,7 +52,7 @@ The intended audience for this journey are developers who want to develop a comp
 
 # Watch the Video
 
-[![](http://img.youtube.com/vi/hiYSYOgi1GM/0.jpg)](https://youtu.be/hiYSYOgi1GM)
+[![](https://img.youtube.com/vi/hiYSYOgi1GM/0.jpg)](https://youtu.be/hiYSYOgi1GM)
 
 # Steps
 
@@ -63,24 +63,24 @@ described in detail below.
 1. [Create IBM Cloud services](#2-create-ibm-cloud-services)
 1. [Import the Node-RED flow](#3-import-the-node-red-flow)
 1. [Note the websocket URL](#4-note-the-websocket-url)
-1. [Update the websocket URL](#5-update-the-websocket-url)
+1. [Update the websocket URL in HTML code](#5-update-the-websocket-url-in-html-code)
 1. [Create the notebook](#6-create-the-notebook)
 1. [Add the data](#7-add-the-data)
-1. [Update the notebook with service credentials](#8-update-the-notebook-with-service-credentials)
+1. [Update the notebook with service credentials and websocket URL](#8-update-the-notebook-with-service-credentials-and-websocket-url)
 1. [Run the notebook](#9-run-the-notebook)
 1. [Analyze the results](#10-analyze-the-results)
 
 ## 1. Sign up for Watson Studio
 
-Sign up for IBM's [Watson Studio](https://dataplatform.ibm.com/). By signing up for the Watson Studio, two services will be created - Spark and ObjectStore in your Bluemix account. 
+Sign up for IBM's [Watson Studio](https://dataplatform.cloud.ibm.com/). By signing up for the Watson Studio, two services will be created - Spark and ObjectStore in your Bluemix account. 
 
 ## 2. Create IBM Cloud services
 
-* Create the [Node-RED Starter application](https://console.bluemix.net/catalog/starters/node-red-starter).
+* Create the [Node-RED Starter application](https://cloud.ibm.com/catalog/starters/node-red-starter).
 * Choose an appropriate name for the Node-RED application - `App name:`.
 * Click on `Create`.
 
-  * [**Node-RED Starter**](https://console.bluemix.net/catalog/starters/node-red-starter)
+  * [**Node-RED Starter**](https://cloud.ibm.com/catalog/starters/node-red-starter)
 
   ![](doc/source/images/bluemix_service_nodered.png)
 
@@ -132,7 +132,7 @@ Click on `Done` and re-deploy the flow.
 
 ## 6. Create the notebook
 
-* In [Watson Studio](https://dataplatform.ibm.com), click on `Create notebook` to create a notebook.
+* In [Watson Studio](https://dataplatform.cloud.ibm.com/), click on `Create notebook` to create a notebook.
 * Create a project if necessary, provisioning an object storage service if required.
 * In the `Assets` tab, select the `Create notebook` option.
 * Select the `From URL` tab.
@@ -218,6 +218,6 @@ The `<NODERED_BASE_URL>` is the base URL noted in section [Note the websocket UR
 
 # License
 
-This code pattern is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1 (DCO)](https://developercertificate.org/) and the [Apache Software License, Version 2](http://www.apache.org/licenses/LICENSE-2.0.txt).
+This code pattern is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1 (DCO)](https://developercertificate.org/) and the [Apache Software License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
 
-[Apache Software License (ASL) FAQ](http://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
+[Apache Software License (ASL) FAQ](https://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
