@@ -72,7 +72,7 @@ described in detail below.
 
 ## 1. Sign up for Watson Studio
 
-Sign up for IBM's [Watson Studio](https://dataplatform.cloud.ibm.com/). By signing up for the Watson Studio, two services will be created - Spark and ObjectStore in your Bluemix account. 
+Sign up for IBM's [Watson Studio](https://dataplatform.cloud.ibm.com/). By signing up for Watson Studio, an Object Storage service will be created in your IBM Cloud account.
 
 ## 2. Create IBM Cloud services
 
