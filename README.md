@@ -1,4 +1,6 @@
-# Orchestration of the analytics workflow in IBM Watson Studio using a custom web user-interface built with Node-RED
+# Orchestrate data science workflows using Node-RED
+
+### Create a web interface using Node-RED to trigger an IBM Watson Studio analytics workflow
 
 > Data Science Experience is now Watson Studio. Although some images in this code pattern may show the service as Data Science Experience, the steps and processes will still work.
 
